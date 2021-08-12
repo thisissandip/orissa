@@ -7,19 +7,25 @@ $site_description = get_bloginfo('description');
     <!-- header-title -->
     <div class="header-title">
 
-        <?php if (has_custom_logo()): ?>
-        <div class="site-logo"><?php the_custom_logo();?></div>
-        <?php endif;?>
 
+        <?php if (has_custom_logo()): ?>
+        <div class="site-logo">
+            <?php the_custom_logo();?>
+        </div>
+        <?php else: ?>
         <div class="site-info">
             <?php if ($site_title): ?>
-            <div class="site-title"><?php echo wp_kses_post($site_title); ?></div>
+            <div class="site-title">
+                <?php echo wp_kses_post($site_title); ?></div>
             <?php endif;?>
 
             <?php if ($site_description): ?>
-            <div class="site-description"><?php echo wp_kses_post($site_description); ?></div>
+            <div class="site-description"> <?php echo wp_kses_post($site_description); ?></div>
             <?php endif;?>
         </div>
+        <?php endif;?>
+
+
 
 
     </div>
