@@ -1,0 +1,10 @@
+#site-header {
+	width: 100%;
+	.inner-header {
+		display: flex;
+		padding: 20px;
+		width: 100%;
+		background-color: red;
+		justify-content: space-between;
+	}
+}

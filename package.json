@@ -1,0 +1,21 @@
+{
+	"name": "orissa",
+	"version": "1.0.1",
+	"description": "Orissa WordPress Theme",
+	"author": "Sandip Mondal",
+	"license": "GPL-3.0",
+	"devDependencies": {
+		"browser-sync": "^2.26.5",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^6.1.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-sass": "^4.0.2",
+		"gulp-uglify": "^3.0.2"
+	},
+	"dependencies": {},
+	"main": "gulpfile.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": []
+}
