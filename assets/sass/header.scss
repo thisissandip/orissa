@@ -1,10 +1,41 @@
-#site-header {
+header {
 	width: 100%;
-	.inner-header {
+	nav {
 		display: flex;
-		padding: 20px;
+		padding: 20px 50px;
 		width: 100%;
-		background-color: red;
+		background-color: green;
 		justify-content: space-between;
+		.header-title {
+			display: flex;
+			align-items: center;
+			.site-logo {
+				margin-right: 10px;
+				a {
+					img {
+						width: 50px;
+						height: 50px;
+					}
+				}
+			}
+			.site-info {
+				.site-title {
+					font-size: 40px;
+				}
+			}
+		}
+
+		.header-menu {
+			ul {
+				display: flex;
+				a {
+					margin: 0 10px;
+					li {
+						list-style: none;
+						padding: 0 5px;
+					}
+				}
+			}
+		}
 	}
 }

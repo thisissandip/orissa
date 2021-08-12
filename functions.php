@@ -1,27 +1,30 @@
 <?php
 /**
  * Orissa theme functions
+ *
+ * @package orissa
  */
+
+/**
+ * Define constants for theme
+ */
+
+if (!defined("ORISSA_DIR_PATH")) {
+    define("ORISSA_DIR_PATH", untrailingslashit((get_template_directory())));
+}
+
+if (!defined("ORISSA_DIR_URI")) {
+    define("ORISSA_DIR_URI", untrailingslashit((get_template_directory_uri())));
+}
 
 /**
  * Enqueue scripts and styles.
  */
 
-function orissa_theme_scripts() {
-    wp_register_style("orissa-theme-styles", get_stylesheet_uri(), [], filemtime(get_template_directory() . "/style.css"), "all");
-    wp_enqueue_style('orissa-theme-styles');
-
-    // register script
-    wp_register_script("orissa-theme-script", get_template_directory_uri() . "/dist/js/main.js", ["jquery"], filemtime(get_template_directory() . "/assets/js/main.js"), true);
-    wp_enqueue_script("orissa-theme-script");
-}
-
-add_action('wp_enqueue_scripts', 'orissa_theme_scripts');
+require ORISSA_DIR_PATH . "/inc/functions/func-enqueue.php";
 
 /**
- * Gutenberg Editor Styles
+ * Orissa Theme Supports.
  */
-function orissa_editor_styles() {
-    wp_enqueue_style('orissa-blocks-editor-style', get_template_directory_uri() . '/dist/css/editor-styles.css');
-}
-add_action('enqueue_block_editor_assets', 'orissa_editor_styles');
+
+require ORISSA_DIR_PATH . "/inc/functions/func-theme-support.php";

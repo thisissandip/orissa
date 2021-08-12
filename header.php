@@ -26,17 +26,5 @@ if (function_exists('wp_body_open')) {
 ?>
 
     <header id="site-header">
-        <div class="inner-header">
-            <!-- header-title -->
-            <div class="header-title">
-                Orissa
-            </div>
-            <!-- header-title -->
-            <!-- header-menu -->
-            <div class="header-menu">
-
-            </div>
-            <!-- header-menu -->
-        </div>
-        </div>
+        <?php get_template_part("template-parts/header/navigation")?>
     </header>
