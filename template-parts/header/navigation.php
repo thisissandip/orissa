@@ -15,7 +15,11 @@ $site_description = get_bloginfo('description');
         <div class="site-info">
             <?php if ($site_title): ?>
             <div class="site-title">
-                <?php echo wp_kses_post($site_title); ?></div>
+                <?php
+$home_link_contents = '<a href="' . esc_url(home_url('/')) . '" rel="home">' . wp_kses_post($site_title) . '</a>';
+echo $home_link_contents;
+?>
+            </div>
             <?php endif;?>
 
             <?php if ($site_description): ?>
@@ -44,12 +48,15 @@ $site_description = get_bloginfo('description');
             <div class="site-info">
                 <?php if ($site_title): ?>
                 <div class="modal-site-title">
-                    <?php echo wp_kses_post($site_title); ?></div>
-                <?php endif;?>
+                    <?php
+$home_link_contents = '<a href="' . esc_url(home_url('/')) . '" rel="home">' . wp_kses_post($site_title) . '</a>';
+echo $home_link_contents;
+?>
+                    <?php endif;?>
 
+                </div>
             </div>
-        </div>
-        <?php
+            <?php
 if (has_nav_menu('orissa-theme-header-menu')) {
     wp_nav_menu(array(
         'theme_location' => 'orissa-theme-header-menu',
@@ -60,8 +67,8 @@ if (has_nav_menu('orissa-theme-header-menu')) {
     ));
 }
 ?>
+        </div>
+        <!-- header-modal end -->
+
+
     </div>
-    <!-- header-modal end -->
-
-
-</div>

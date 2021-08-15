@@ -3,10 +3,10 @@ $menuitem-hover-color: yellow;
 
 header {
 	width: 100%;
-	padding: 30px 50px;
-	width: 100%;
+	padding: 20px 60px;
 	.navbar {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 
@@ -21,13 +21,20 @@ header {
 				}
 			}
 			.site-info {
+				display: flex;
+				align-items: flex-end;
 				.site-title {
-					font-size: 30px;
-					margin-bottom: 3px;
+					a {
+						color: #000;
+						text-decoration: none;
+					}
+					font-size: 40px;
 				}
 				.site-description {
+					margin-left: 30px;
+					margin-bottom: 7px;
 					font-weight: 300;
-					font-size: 15px;
+					font-size: 18px;
 				}
 			}
 		}
@@ -35,7 +42,7 @@ header {
 		.header-menu {
 			.orissa-nav-menu-icon {
 				cursor: pointer;
-				font-size: 40px;
+				font-size: 30px;
 			}
 		}
 
@@ -46,17 +53,20 @@ header {
 			width: 100%;
 			height: 100vh;
 			background-color: #000;
+			padding: 0 60px;
 			overflow: scroll;
 			transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
 			.header-modal-title {
 				position: relative;
-				width: 50%;
 				top: 30px;
 				color: #fff;
-				margin: 5px 35px;
 				.modal-site-title {
-					color: $menuitem-hover-color;
-					font-size: 45px;
+					margin: 5px 0;
+					font-size: 55px;
+					a {
+						color: $menuitem-hover-color;
+						text-decoration: none;
+					}
 				}
 				.modal-site-description {
 					font-weight: 200;
@@ -66,10 +76,11 @@ header {
 
 			.orissa-theme-menu-close {
 				position: absolute;
+				z-index: 10;
 				top: 30px;
-				right: 50px;
+				right: 60px;
 				cursor: pointer;
-				font-size: 40px;
+				font-size: 35px;
 				color: $menuitem-color;
 				&:hover {
 					color: $menuitem-hover-color;
@@ -78,12 +89,12 @@ header {
 
 			nav {
 				position: relative;
-				margin-top: 80px;
+				margin-top: 40px;
 				ul {
 					li {
 						font-size: 70px;
 						list-style: none;
-						margin: 5px 35px;
+						margin: 5px 0px;
 						overflow: hidden;
 
 						a {
@@ -120,6 +131,91 @@ header {
 
 				ul.show-dropdown {
 					max-height: 4000px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	header {
+		width: 100%;
+		padding: 20px 30px;
+		.navbar {
+			.header-title {
+				.site-logo {
+					margin-right: 10px;
+					a {
+						img {
+							width: 100%;
+							height: 45px;
+						}
+					}
+				}
+				.site-info {
+					display: flex;
+					align-items: flex-end;
+					.site-title {
+						font-size: 30px;
+					}
+					.site-description {
+						display: none;
+					}
+				}
+			}
+
+			.header-menu {
+				.orissa-nav-menu-icon {
+					font-size: 25px;
+				}
+			}
+
+			.header-modal {
+				padding: 0 20px;
+				.header-modal-title {
+					position: relative;
+					top: 30px;
+					color: #fff;
+					.modal-site-title {
+						margin: 5px;
+						font-size: 30px;
+					}
+					/* 	.modal-site-description {
+						font-weight: 200;
+						font-size: 18px;
+					} */
+				}
+
+				.orissa-theme-menu-close {
+					top: 35px;
+					right: 30px;
+					font-size: 25px;
+				}
+
+				nav {
+					position: relative;
+					margin-top: 30px;
+					ul {
+						li {
+							font-size: 25px;
+							margin: 5px;
+							span {
+								i {
+									font-size: 18px;
+								}
+							}
+						}
+					}
+
+					.nav-item-toggle-btn + ul {
+						max-height: 0;
+						overflow: hidden;
+						transition: 0.3s all ease-in-out;
+					}
+
+					ul.show-dropdown {
+						max-height: 4000px;
+					}
 				}
 			}
 		}

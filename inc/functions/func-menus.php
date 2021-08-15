@@ -49,7 +49,7 @@ class Orissa_Menu_Walker extends Walker_Nav_Menu {
         $id = strlen($id) ? ' id="' . esc_attr($id) . '"' : '';
 
 // append everything to the output
-        $output .= $indent . '<div><li' . $id . $value . $class_names . $li_attributes . '>';
+        $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
 
 // For a Tags
 
