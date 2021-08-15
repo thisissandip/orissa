@@ -3,10 +3,9 @@ $site_title = get_bloginfo('name');
 $site_description = get_bloginfo('description');
 ?>
 
-<nav>
+<div class="navbar">
     <!-- header-title -->
     <div class="header-title">
-
 
         <?php if (has_custom_logo()): ?>
         <div class="site-logo">
@@ -25,24 +24,44 @@ $site_description = get_bloginfo('description');
         </div>
         <?php endif;?>
 
-
-
-
     </div>
     <!-- header-title end -->
+
     <!-- header-menu -->
     <div class="header-menu">
-        <ul>
-            <a href="#">
-                <li>Hello</li>
-            </a>
-            <a href="#">
-                <li>Hello</li>
-            </a>
-            <a href="#">
-                <li>Hello</li>
-            </a>
-        </ul>
+        <div class="orissa-nav-menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+
     </div>
     <!-- header-menu end-->
-</nav>
+
+    <!-- header-modal -->
+    <div class="header-modal">
+
+        <div class="orissa-theme-menu-close"><i class="fas fa-times"></i></div>
+        <div class="header-modal-title">
+            <div class="site-info">
+                <?php if ($site_title): ?>
+                <div class="modal-site-title">
+                    <?php echo wp_kses_post($site_title); ?></div>
+                <?php endif;?>
+
+            </div>
+        </div>
+        <?php
+if (has_nav_menu('orissa-theme-header-menu')) {
+    wp_nav_menu(array(
+        'theme_location' => 'orissa-theme-header-menu',
+        'menu_class' => 'main-menu',
+        'container' => 'nav',
+        'container_class' => 'header__main-nav',
+        'walker' => new Orissa_Menu_Walker(),
+    ));
+}
+?>
+    </div>
+    <!-- header-modal end -->
+
+
+</div>

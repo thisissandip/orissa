@@ -24,7 +24,13 @@ if (!defined("ORISSA_DIR_URI")) {
 require ORISSA_DIR_PATH . "/inc/functions/func-enqueue.php";
 
 /**
- * Orissa Theme Supports.
+ * Theme Supports.
  */
 
 require ORISSA_DIR_PATH . "/inc/functions/func-theme-support.php";
+
+/**
+ *  Menus.
+ */
+
+require ORISSA_DIR_PATH . "/inc/functions/func-menus.php";
