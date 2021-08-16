@@ -4,6 +4,7 @@ $site_description = get_bloginfo('description');
 ?>
 
 <div class="navbar">
+
     <!-- header-title -->
     <div class="header-title">
 
@@ -21,10 +22,6 @@ echo $home_link_contents;
 ?>
             </div>
             <?php endif;?>
-
-            <?php if ($site_description): ?>
-            <div class="site-description"> <?php echo wp_kses_post($site_description); ?></div>
-            <?php endif;?>
         </div>
         <?php endif;?>
 
@@ -33,6 +30,9 @@ echo $home_link_contents;
 
     <!-- header-menu -->
     <div class="header-menu">
+        <div class="orissa-search-icon">
+            <i class="fas fa-search"></i>
+        </div>
         <div class="orissa-nav-menu-icon">
             <i class="fas fa-bars"></i>
         </div>
@@ -56,7 +56,9 @@ echo $home_link_contents;
 
                 </div>
             </div>
-            <?php
+        </div>
+        <!-- menu -->
+        <?php
 if (has_nav_menu('orissa-theme-header-menu')) {
     wp_nav_menu(array(
         'theme_location' => 'orissa-theme-header-menu',
@@ -67,8 +69,21 @@ if (has_nav_menu('orissa-theme-header-menu')) {
     ));
 }
 ?>
-        </div>
-        <!-- header-modal end -->
-
-
+        <!-- menu end -->
     </div>
+    <!-- header-modal end -->
+
+    <!-- search-modal -->
+
+    <div class="search-modal">
+        <?php get_search_form()?>
+        <div class="orissa-theme-search-close"><i class="fas fa-times"></i></div>
+    </div>
+
+    <div class="search-modal-overlay"></div>
+
+
+    <!-- search-modal end-->
+
+
+</div>
