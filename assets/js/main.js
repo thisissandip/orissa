@@ -1,1 +1,1 @@
-console.log('noo');
+const loggedIn = document.querySelector('.logged-in') ? true : false;
