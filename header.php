@@ -26,5 +26,6 @@ if (function_exists('wp_body_open')) {
 ?>
 
     <header id="site-header">
-        <?php get_template_part("template-parts/header/navigation")?>
+        <?php get_template_part("template-parts/components/header/navigation")?>
     </header>
+    <!-- #site-header end -->

@@ -5,7 +5,6 @@ $site_description = get_bloginfo('description');
 
 <div class="navbar">
 
-    <!-- header-title -->
     <div class="header-title">
 
         <?php if (has_custom_logo()): ?>
@@ -27,8 +26,6 @@ echo $home_link_contents;
 
     </div>
     <!-- header-title end -->
-
-    <!-- header-menu -->
     <div class="header-menu">
         <div class="orissa-search-icon">
             <i class="fas fa-search"></i>
@@ -39,26 +36,25 @@ echo $home_link_contents;
 
     </div>
     <!-- header-menu end-->
-
-    <!-- header-modal -->
     <div class="header-modal">
 
-        <div class="orissa-theme-menu-close"><i class="fas fa-times"></i></div>
-        <div class="header-modal-title">
-            <div class="site-info">
-                <?php if ($site_title): ?>
-                <div class="modal-site-title">
-                    <?php
+        <div class="header-modal-content">
+            <div class="orissa-theme-menu-close"><i class="fas fa-times"></i></div>
+            <div class="header-modal-title">
+                <div class="site-info">
+                    <?php if ($site_title): ?>
+                    <div class="modal-site-title">
+                        <?php
 $home_link_contents = '<a href="' . esc_url(home_url('/')) . '" rel="home">' . wp_kses_post($site_title) . '</a>';
 echo $home_link_contents;
 ?>
-                    <?php endif;?>
+                        <?php endif;?>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- menu -->
-        <?php
+            <!-- menu -->
+            <?php
 if (has_nav_menu('orissa-theme-header-menu')) {
     wp_nav_menu(array(
         'theme_location' => 'orissa-theme-header-menu',
@@ -69,11 +65,10 @@ if (has_nav_menu('orissa-theme-header-menu')) {
     ));
 }
 ?>
-        <!-- menu end -->
+            <!-- menu end -->
+        </div>
     </div>
     <!-- header-modal end -->
-
-    <!-- search-modal -->
 
     <div class="search-modal">
         <?php get_search_form()?>

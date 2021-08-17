@@ -39,6 +39,11 @@ function orissa_theme_support() {
     // Post thumbnails
     add_theme_support('post-thumbnails');
 
+    // Add image sizes
+    add_image_size('orissa_preview_image_low_resolution', 540, 9999);
+    add_image_size('orissa_preview_image_high_resolution', 1080, 9999);
+    add_image_size('orissa_fullscreen', 1980, 9999);
+
     /*
      * Add editor styles
      */

@@ -8,7 +8,7 @@ header {
 		align-items: center;
 		justify-content: space-between;
 		background-color: grey;
-		padding: 15px 60px;
+		padding: 15px $site-horizontal-padding;
 		width: 100%;
 
 		.header-title {
@@ -66,82 +66,84 @@ header {
 			overflow: scroll;
 			transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-			.header-modal-title {
-				position: relative;
-				top: 30px;
-				color: #fff;
-				.modal-site-title {
-					margin: 5px 15px;
-					font-size: 70px;
-					a {
-						color: $menuitem-hover-color;
-						text-decoration: none;
+			.header-modal-content {
+				.header-modal-title {
+					position: relative;
+					top: 30px;
+					color: #fff;
+					.modal-site-title {
+						margin: 5px 15px;
+						font-size: 80px;
+						a {
+							color: $menuitem-hover-color;
+							text-decoration: none;
+						}
+					}
+					.modal-site-description {
+						font-weight: 200;
+						font-size: 18px;
 					}
 				}
-				.modal-site-description {
-					font-weight: 200;
-					font-size: 18px;
+
+				.orissa-theme-menu-close {
+					position: absolute;
+					z-index: 10;
+					top: 30px;
+					right: 60px;
+					cursor: pointer;
+					font-size: 35px;
+					color: $menuitem-color;
+					&:hover {
+						color: $menuitem-hover-color;
+					}
 				}
-			}
 
-			.orissa-theme-menu-close {
-				position: absolute;
-				z-index: 10;
-				top: 30px;
-				right: 60px;
-				cursor: pointer;
-				font-size: 35px;
-				color: $menuitem-color;
-				&:hover {
-					color: $menuitem-hover-color;
-				}
-			}
+				nav {
+					position: relative;
+					margin-top: 80px;
+					padding-bottom: 40px;
+					ul {
+						li {
+							font-size: 70px;
+							list-style: none;
+							margin: 5px 15px;
+							overflow: hidden;
 
-			nav {
-				position: relative;
-				margin-top: 40px;
-				padding-bottom: 40px;
-				ul {
-					li {
-						font-size: 70px;
-						list-style: none;
-						margin: 5px 15px;
-						overflow: hidden;
-
-						a {
-							color: $menuitem-color;
-							text-decoration: none;
-							transition: 0.15s all ease-in-out;
-							&:hover {
-								color: $menuitem-hover-color;
-							}
-						}
-						span {
-							i {
-								font-size: 40px;
-								cursor: pointer;
-								margin-left: 10px;
-								transition: 0.25s all ease;
+							a {
 								color: $menuitem-color;
+								text-decoration: none;
+								transition: 0.15s all ease-in-out;
 								&:hover {
 									color: $menuitem-hover-color;
 								}
 							}
-							i.rotate-chevron {
-								transform: rotate(180deg);
+							span {
+								i {
+									font-size: 40px;
+									cursor: pointer;
+									margin-left: 10px;
+									transition: 0.25s all ease;
+									color: $menuitem-color;
+									&:hover {
+										color: $menuitem-hover-color;
+									}
+								}
+								i.rotate-chevron {
+									transform: rotate(180deg);
+								}
 							}
 						}
 					}
-				}
 
-				.nav-item-toggle-btn + ul {
-					max-height: 0;
-					overflow: hidden;
-					transition: 0.3s all ease;
-				}
+					.nav-item-toggle-btn + ul {
+						max-height: 0;
+						overflow: hidden;
+						transition: 0.3s all ease;
+					}
 
-				ul.show-dropdown {
-					max-height: 4000px;
+					ul.show-dropdown {
+						max-height: 4000px;
+					}
 				}
 			}
 		}
@@ -213,11 +215,20 @@ header {
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	header {
+		width: 100%;
+		.navbar {
+			padding: 20px $site-horizontal-padding-1200;
+		}
+	}
+}
+
 @media screen and (max-width: 800px) {
 	header {
 		width: 100%;
 		.navbar {
-			padding: 20px;
+			padding: 20px  $site-horizontal-padding-800;
 			.header-title {
 				.site-logo {
 					margin-right: 10px;
@@ -251,7 +262,8 @@ header {
 
 			.header-modal {
 				padding: 0 20px;
-
+			
+			.header-modal-content{
 				.header-modal-title {
 					position: relative;
 					top: 30px;
@@ -272,6 +284,7 @@ header {
 				nav {
 					position: relative;
 					margin: 40px 0;
+					margin-top: 50px;
 
 					ul {
 						li {
@@ -314,6 +327,9 @@ header {
 					}
 				}
 			}
+			}
+
+			
 		}
 	}
 }
