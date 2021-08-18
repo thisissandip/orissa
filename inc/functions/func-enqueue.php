@@ -13,6 +13,8 @@ function orissa_theme_scripts() {
     // enqueue gsap
     wp_register_script("gsap-orissa", 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js', ["jquery"], "5.8", true);
     wp_enqueue_script("gsap-orissa");
+    wp_register_script("gsap-scrolltrigger-orissa", 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js', ["jquery"], "5.8", true);
+    wp_enqueue_script("gsap-scrolltrigger-orissa");
 
     // enqueue theme styles
     wp_register_style("orissa-theme-styles", get_stylesheet_uri(), [], filemtime(ORISSA_DIR_PATH . "/style.css"), "all");

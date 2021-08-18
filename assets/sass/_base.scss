@@ -9,3 +9,7 @@ body {
 	margin: 0 auto; */
 	font-family: 'Merriweather', serif;
 }
+
+.updated:not(.published) {
+	display: none;
+}
