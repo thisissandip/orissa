@@ -12,14 +12,14 @@ $term_lists = wp_get_post_terms(get_the_ID(), 'category', array('fields' => 'all
 
 <article id="post-<?php the_ID();?>" <?php post_class();?>>
 
-    <header class="entry-header alignwide">
+    <header class="post-entry-header alignwide">
         <?php
-the_title('<h1 class="entry-title">', '</h1>');
+the_title('<h1 class="post-entry-title">', '</h1>');
 if (!empty($term_lists) || is_array($term_lists)) {
     foreach ($term_lists as $key => $term) {
         $term_link = get_term_link($term);
         ?>
-        <a class="taxonomy-term" href="<?php echo esc_url($term_link) ?>">
+        <a class="post-taxonomy-term" href="<?php echo esc_url($term_link) ?>">
             <?php echo esc_html($term->name); ?>
         </a>
         <?php

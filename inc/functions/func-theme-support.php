@@ -44,10 +44,22 @@ function orissa_theme_support() {
     add_image_size('orissa_preview_image_high_resolution', 1080, 9999);
     add_image_size('orissa_fullscreen', 1980, 9999);
 
+    // Alignwide and alignfull classes in the block editor
+    add_theme_support('align-wide');
+
+    // block styles support
+    add_theme_support("wp-block-styles");
+
+    // for embed blocks
+    add_theme_support('responsive-embeds');
+
     /*
      * Add editor styles
      */
-    add_editor_style();
+    add_theme_support('editor-styles');
+
+    // enqueue editor styles
+    add_editor_style('editor-styles.css');
 
     // Add default posts and comments RSS feed links to head.
     add_theme_support('automatic-feed-links');
@@ -62,12 +74,6 @@ function orissa_theme_support() {
 
     // Make the theme translation ready
     load_theme_textdomain('orissa-theme', get_template_directory() . '/languages');
-
-    // Alignwide and alignfull classes in the block editor
-    add_theme_support('align-wide');
-
-    // block styles support
-    add_theme_support("wp-block-styles");
 
     // max content width
     global $content_width;

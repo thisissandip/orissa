@@ -1,7 +1,43 @@
+/** === Fonts === */
+
+$font__body: 'Merriweather', serif;
+$font__heading: 'Merriweather', serif;
+$font__figcaption: $font__body;
+
+$font__weight-body: 400;
+$font__weight-heading: 400;
+
+$font__size--sm: 24px;
+$font__size--md: 36px;
+$font__size--lg: 48px;
+$font__size--xlg: 60px;
+$font__size--xxlg: 72px;
+
+/** === Colors === */
+
+$black: #1c1c1c;
+$white: #fff;
+$yellow: #ffff39;
+$gray: #869092;
+
+$color__text-heading: #232323;
+$color__text-main: #232323;
+
+$color--background-body: #fff;
+$color--background-body-light: $gray;
+
+$color--has-background-color-fallback: #f5f5f5;
+
+/** === Content === */
+
 $site-horizontal-padding: 60px;
 $site-horizontal-padding-1200: 40px;
 $site-horizontal-padding-800: 20px;
 
-
-$primary-color: yellow;
-$primary-bg-color: black;
+$content__width: 720px;
+$content__width--wide: 920px;
+$content__width: 720px;
+$content__width--wide: 920px;
+$content__padding: 20px;
+$content__width--less-padding: $content__width - ($content__padding * 2);
+$content__width--wide--less-padding: $content__width--wide - ($content__padding * 2);

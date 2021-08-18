@@ -1,5 +1,4 @@
-$menuitem-color: #fff;
-$menuitem-hover-color: $primary-color;
+/** === Header Navigation === */
 
 header {
 	width: 100%;
@@ -55,6 +54,8 @@ header {
 			}
 		}
 
+		/** === Header Navigation Modal === */
+
 		.header-modal {
 			position: fixed;
 			top: -100%;
@@ -76,7 +77,7 @@ header {
 						margin: 5px 15px;
 						font-size: 3em;
 						a {
-							color: $menuitem-hover-color;
+							color: $yellow;
 							text-decoration: none;
 						}
 					}
@@ -93,9 +94,9 @@ header {
 					right: 60px;
 					cursor: pointer;
 					font-size: 35px;
-					color: $menuitem-color;
+					color: $white;
 					&:hover {
-						color: $menuitem-hover-color;
+						color: $yellow;
 					}
 				}
 
@@ -111,11 +112,11 @@ header {
 							overflow: hidden;
 
 							a {
-								color: $menuitem-color;
+								color: $white;
 								text-decoration: none;
 								transition: 0.15s all ease-in-out;
 								&:hover {
-									color: $menuitem-hover-color;
+									color: $yellow;
 								}
 							}
 							span {
@@ -124,9 +125,9 @@ header {
 									cursor: pointer;
 									margin-left: 10px;
 									transition: 0.25s all ease;
-									color: $menuitem-color;
+									color: $white;
 									&:hover {
-										color: $menuitem-hover-color;
+										color: $yellow;
 									}
 								}
 								i.rotate-chevron {
@@ -149,6 +150,8 @@ header {
 			}
 		}
 
+		/** === Search Overlay === */
+
 		.search-modal-overlay {
 			position: fixed;
 			top: 0;
@@ -161,6 +164,8 @@ header {
 			z-index: 1;
 			transition: 0.3s all ease-in;
 		}
+
+		/** === Search Modal === */
 
 		.search-modal {
 			position: fixed;
@@ -195,7 +200,7 @@ header {
 					border-right: 0;
 					transition: 0.5s all ease;
 					&:focus {
-						border-color: $menuitem-hover-color;
+						border-color: $yellow;
 					}
 				}
 			}
@@ -207,9 +212,9 @@ header {
 				right: 3%;
 				cursor: pointer;
 				font-size: 35px;
-				color: $menuitem-color;
+				color: $white;
 				&:hover {
-					color: $menuitem-hover-color;
+					color: $yellow;
 				}
 			}
 		}
@@ -322,9 +327,9 @@ header {
 					.orissa-theme-search-close {
 						top: 52%;
 						font-size: 25px;
-						color: $menuitem-color;
+						color: $white;
 						&:hover {
-							color: $menuitem-hover-color;
+							color: $yellow;
 						}
 					}
 				}

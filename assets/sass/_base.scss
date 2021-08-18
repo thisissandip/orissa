@@ -5,11 +5,10 @@
 }
 
 body {
-	/* max-width: 1380px;
-	margin: 0 auto; */
-	font-family: 'Merriweather', serif;
+	font-family: $font__body;
 }
 
+// hide updated posted on (time)
 .updated:not(.published) {
 	display: none;
 }

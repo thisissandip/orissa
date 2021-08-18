@@ -1,5 +1,6 @@
-@import './_base.scss';
 @import './_variables.scss';
+@import './_base.scss';
 
-@import './header.scss';
-@import './blog.scss';
+@import './header/header.scss';
+@import './blog/blog.scss';
+@import './singular/single.scss';

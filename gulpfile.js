@@ -37,7 +37,7 @@ function editorCSS() {
 				outputStyle: 'expanded',
 			}).on('error', sass.logError)
 		)
-		.pipe(gulp.dest(root + 'dist/css'));
+		.pipe(gulp.dest(root));
 }
 
 function javascript() {
