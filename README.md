@@ -6,8 +6,8 @@ To do:
 - [x] Gulp
 - [x] Navigation Menu
 - [x] Header
-- [x] Search Form - UI
-- [ ] Search Form
+- [x] Search Form
+- [x] Search Results Page
 - [x] Posts
 - [x] Post Pagination
 - [x] Pages
@@ -18,4 +18,6 @@ To do:
 - [ ] Comments
 - [ ] Widgets
 - [ ] Footer
+- [ ] Redesign Nav
+- [ ] Check Mobile Edge Cases
 - [ ] Update Project ReadMe
