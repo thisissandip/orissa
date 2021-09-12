@@ -1,8 +1,135 @@
 /** === Singular page styles === */
 #site-content {
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: #fff;
+	color: #000;
+
 	article {
-		header.post-entry-header {
-			width: 90%;
+		header.entry-header {
+			padding: 2em 0 0 0;
+			width: 100%;
+			background-color: #fff;
+
+			& > * {
+				margin: 0 auto;
+				max-width: $content__width;
+			}
+
+			.entry-title {
+				text-align: left;
+				font-weight: $font__weight-heading;
+				font-size: $font__size--xlg;
+				margin-bottom: 30px;
+				margin-top: 30px;
+				letter-spacing: $heading-letter-spacing;
+			}
+
+			.post-meta-info {
+				display: flex;
+				margin-bottom: 30px;
+				.author {
+					margin-right: 10px;
+				}
+			}
+
+			.category-container {
+				font-family: $font__primary;
+				font-size: $font__size--xxsm;
+				.category-term {
+					background-color: $gray;
+					color: $white;
+					padding: 10px 15px;
+					margin-right: 10px;
+					border-radius: 12px;
+				}
+			}
+
+			.post-thumbnail {
+				margin-top: 40px;
+				width: calc(#{$content__width--wide} + 2 * #{$content__padding});
+				max-width: 100%;
+				img {
+					width: 100%;
+					height: 100%;
+					margin-bottom: 15px;
+				}
+				figcaption {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.entry-content {
+		padding: 1em 0;
+		font-family: $font__secondary;
+		font-size: $font__size--xsm;
+
+		& > * {
+			max-width: $content__width;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		& > .alignfull {
+			width: 100%;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		& > .alignwide {
+			width: calc(#{$content__width--wide} + 2 * #{$content__padding});
+			max-width: 100%;
+			height: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		& > .alignleft,
+		& > [data-align='left'] > .wp-block-cover,
+		[data-align='right'] > .wp-block-cover {
+			float: left;
+			margin-left: calc(50% - #{$content__width} / 2) !important;
+			margin-right: 10px !important;
+			max-width: 420px;
+		}
+		& > .alignright {
+			float: right;
+			margin-right: calc(50% - #{$content__width} / 2) !important;
+			margin-left: 10px !important;
+			max-width: 420px;
+		}
+		& > .aligncenter {
+			margin: 0 auto !important;
+		}
+
+		// page links for page breaks
+		.page-links {
+			.post-page-numbers {
+				margin-right: 5px;
+				padding: 5px 9px;
+				color: #000;
+				background-color: $white;
+				border-color: $gray;
+				border: 1px solid $gray;
+				border-radius: 3px;
+			}
+			.current {
+				color: #fff;
+				background-color: $gray;
+			}
+		}
+	}
+
+	.entry-footer {
+		margin: 0 auto;
+		max-width: $content__width;
+		padding: 4em 0;
+		.pagination-container {
+			display: flex;
+			justify-content: space-between;
+			div {
+				max-width: 300px;
+			}
 		}
 	}
 }

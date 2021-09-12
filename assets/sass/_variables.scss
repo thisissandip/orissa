@@ -1,24 +1,42 @@
 /** === Fonts === */
 
-$font__body: 'Merriweather', serif;
-$font__heading: 'Merriweather', serif;
-$font__figcaption: $font__body;
+$font__primary: 'Inter', sans-serif;
+$font__secondary: $font__primary;
+
+$font__heading: $font__primary;
+$font__content: $font__secondary;
+
+$font__figcaption: $font__primary;
 
 $font__weight-body: 400;
-$font__weight-heading: 400;
+$font__weight-heading: 800;
 
+$font__size--xxxsm: 12px;
+$font__size--xxsm: 16px;
+$font__size--xsm: 18px;
 $font__size--sm: 24px;
 $font__size--md: 36px;
 $font__size--lg: 48px;
 $font__size--xlg: 60px;
 $font__size--xxlg: 72px;
 
+/** === Letter Spacing === */
+
+$heading-letter-spacing: -1.5px;
+
 /** === Colors === */
 
 $black: #1c1c1c;
+$badge-bg__color: #292d32;
 $white: #fff;
 $yellow: #ffff39;
 $gray: #869092;
+$purple: #cf8eff;
+$dark-violet: #0e1217;
+$x-dark-violet: #141620;
+$text-color: #eef6fc;
+$placeholder-color: #747579;
+$caption-color: #b1b1b1;
 
 $color__text-heading: #232323;
 $color__text-main: #232323;
@@ -34,10 +52,9 @@ $site-horizontal-padding: 60px;
 $site-horizontal-padding-1200: 40px;
 $site-horizontal-padding-800: 20px;
 
-$content__width: 720px;
-$content__width--wide: 920px;
-$content__width: 720px;
-$content__width--wide: 920px;
+$content__width: 600px;
+$content__width-heading: 1000px;
+$content__width--wide: 1000px;
 $content__padding: 20px;
 $content__width--less-padding: $content__width - ($content__padding * 2);
 $content__width--wide--less-padding: $content__width--wide - ($content__padding * 2);

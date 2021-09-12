@@ -5,11 +5,11 @@ function init() {
 	allPostPreviewCards.forEach((card) => {
 		gsap.to(card, {
 			opacity: 1,
-			y: 8,
+			y: 4,
 			duration: 0.7,
 			scrollTrigger: {
 				trigger: card,
-				start: 'top+=20 bottom-=350',
+				start: 'top+=30 bottom-=350',
 				//markers: true,
 			},
 		});

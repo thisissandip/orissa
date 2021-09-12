@@ -5,6 +5,10 @@ $site_description = get_bloginfo('description');
 
 <div class="navbar">
 
+    <div class="orissa-nav-menu-icon">
+        <i class="fas fa-bars"></i>
+    </div>
+
     <div class="header-title">
 
         <?php if (has_custom_logo()): ?>
@@ -25,16 +29,13 @@ echo $home_link_contents;
         <?php endif;?>
 
     </div>
-    <!-- header-title end -->
-    <div class="header-menu">
-        <div class="orissa-search-icon">
-            <i class="fas fa-search"></i>
-        </div>
-        <div class="orissa-nav-menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
 
+    <div class="orissa-search-icon">
+        <i class="fas fa-search"></i>
     </div>
+
+
+
     <!-- header-menu end-->
     <div class="header-modal">
 

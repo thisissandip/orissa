@@ -1,6 +1,10 @@
 @import './_variables.scss';
 @import './_base.scss';
+@import './_elements.scss';
+@import './_blocks.scss';
 
-@import './header/header.scss';
+@import './layouts/pagesandposts.scss';
+
+@import './navigation/navigation.scss';
 @import './blog/blog.scss';
 @import './singular/single.scss';

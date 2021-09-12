@@ -1,0 +1,674 @@
+/* --------------------------------------------------------------------------------------------- */
+/*	2. Element Base
+/* --------------------------------------------------------------------------------------------- */
+
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.faux-heading {
+	font-weight: 700;
+	line-height: 1.25;
+	margin: 4rem 0 2.5rem;
+}
+
+h1,
+.heading-size-1 {
+	font-size: 3.2rem;
+}
+h2,
+.heading-size-2 {
+	font-size: 2.8rem;
+}
+h3,
+.heading-size-3 {
+	font-size: 2.4rem;
+}
+h4,
+.heading-size-4 {
+	font-size: 2.1rem;
+}
+h5,
+.heading-size-5 {
+	font-size: 1.9rem;
+}
+h6,
+.heading-size-6 {
+	font-size: 1em;
+}
+
+p {
+	line-height: 1.8;
+	margin: 0 0 1em 0;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+abbr,
+acronym {
+	cursor: help;
+}
+
+address {
+	line-height: 1.5;
+	margin: 0 0 2rem 0;
+}
+
+hr {
+	border: none;
+	border-top: 0.1rem solid currentColor;
+	color: $dark-violet;
+	margin: 5rem 0;
+}
+
+a {
+	color: $purple;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Lists ------------------------------------- */
+
+ul,
+ol {
+	margin: 0.5rem 0 3rem 3rem;
+}
+
+li {
+	line-height: 1.5;
+	margin: 0.5rem 0 0.5rem 2rem;
+}
+
+li > ul,
+li > ol {
+	margin: 0.5rem 0 0.5rem 2rem;
+}
+
+.reset-list-style,
+.reset-list-style ul,
+.reset-list-style ol {
+	list-style: none;
+	margin: 0;
+}
+
+.reset-list-style li {
+	margin: 0;
+}
+
+dt,
+dd {
+	line-height: 1.5;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dt + dd {
+	margin-top: 0.5rem;
+}
+dd + dt {
+	margin-top: 1.5rem;
+}
+
+/* Quotes ------------------------------------ */
+
+blockquote {
+	border-color: $purple;
+	border-style: solid;
+	border-width: 0 0 0 0.2rem;
+	color: inherit;
+	font-size: 1em;
+	margin: 3rem 0;
+	padding: 0 0 0 2rem;
+}
+
+cite {
+	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 600;
+}
+
+blockquote cite {
+	display: block;
+	margin: 2rem 0 0 0;
+}
+
+blockquote p:last-of-type {
+	margin: 0;
+}
+
+/* Code -------------------------------------- */
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace;
+	font-size: 1em;
+	padding: 0.4rem 0.6rem;
+}
+
+code,
+kbd,
+samp {
+	background: #f1f1f3;
+	border-radius: 0.2rem;
+}
+
+pre {
+	border: 0.1rem solid #e1e1e3;
+	line-height: 1.5;
+	margin: 4rem 0;
+	overflow: auto;
+	padding: 3rem 2rem;
+	text-align: left;
+}
+
+pre code {
+	background: transparent;
+	padding: 0;
+}
+
+/* Media ------------------------------------- */
+
+figure {
+	margin: 0;
+}
+
+iframe {
+	border: none;
+	display: block;
+	max-width: 100%;
+}
+
+svg,
+img,
+embed,
+object {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+figcaption,
+.wp-caption-text {
+	display: block;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.2;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+/* GALLERIES */
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 3em 0 3em -0.8em;
+	width: calc(100% + 1.6em);
+}
+
+.gallery-item {
+	margin: 0.8em 0;
+	padding: 0 0.8em;
+}
+
+.gallery-item img,
+.gallery-item {
+	display: block;
+	width: 100%;
+}
+
+.gallery-caption {
+	display: block;
+	margin-top: 0.8em;
+}
+
+/* Inputs ------------------------------------ */
+
+fieldset {
+	border: 0.2rem solid #e1e1e3;
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+	padding: 2rem;
+}
+
+fieldset > *:first-child {
+	margin-top: 0;
+}
+fieldset > *:last-child {
+	margin-bottom: 0;
+}
+
+form {
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+}
+
+form > *:first-child {
+	margin-top: 0;
+}
+form > *:last-child {
+	margin-bottom: 0;
+}
+
+legend {
+	font-size: 0.85em;
+	font-weight: 700;
+	padding: 0 1rem;
+}
+
+label {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 0 0 0.5rem 0;
+}
+
+label.inline,
+input[type='checkbox'] + label {
+	display: inline;
+	font-weight: 400;
+	margin-left: 0.5rem;
+}
+
+input,
+textarea,
+button,
+.select2-container .select2-selection--single {
+	font-family: inherit;
+	line-height: 1;
+}
+
+input,
+textarea,
+.select2-container .select2-selection--single {
+	border-color: #e1e1e3;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='url'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='week'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='color'],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: transparent;
+	border-radius: 0.3rem;
+	border-style: solid;
+	border-width: 0.1rem;
+	box-shadow: none;
+	color: inherit;
+	display: block;
+	font-size: 1.6rem;
+	line-height: normal;
+	margin: 0;
+	max-width: 100%;
+	outline: none;
+	padding: 1.5rem 1.8rem;
+	width: 100%;
+}
+
+textarea {
+	height: 12rem;
+	line-height: 1.5;
+	width: 100%;
+}
+
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+::-webkit-input-placeholder {
+	color: $placeholder-color;
+	line-height: normal;
+}
+::-moz-placeholder {
+	color: $placeholder-color;
+	line-height: normal;
+}
+:-ms-input-placeholder {
+	color: $placeholder-color;
+	line-height: normal;
+}
+:-moz-placeholder {
+	color: $placeholder-color;
+	opacity: 1;
+	line-height: normal;
+}
+::placeholder {
+	color: $placeholder-color;
+	line-height: normal;
+	opacity: 1;
+}
+
+:root figcaption {
+	color: $caption-color;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
+}
+
+button,
+.button,
+.faux-button,
+.wp-block-button__link,
+:root .wp-block-file__button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+:root .woocommerce #respond input#submit,
+:root .woocommerce a.button,
+:root .woocommerce button.button,
+:root .woocommerce input.button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: $purple;
+	border: none;
+	border-radius: 0.3rem;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.8888em;
+	font-weight: 600;
+	line-height: 1;
+	margin: 5px 0;
+	padding: 1.175em 1.75em;
+	text-align: center;
+	text-decoration: none;
+	transition: opacity 0.15s linear, background-color 0.15s ease;
+}
+
+button:hover,
+.button:hover,
+.faux-button:hover,
+.wp-block-button__link:hover,
+:root .wp-block-file__button:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover,
+:root .woocommerce #respond input#submit:hover,
+:root .woocommerce a.button:hover,
+:root .woocommerce button.button:hover,
+:root .woocommerce input.button:hover,
+button:focus,
+.button:focus,
+.faux-button:focus,
+.wp-block-button__link:focus,
+:root .wp-block-file__button:focus,
+input[type='button']:focus,
+input[type='reset']:focus,
+input[type='submit']:focus,
+:root .woocommerce #respond input#submit:focus,
+:root .woocommerce a.button:focus,
+:root .woocommerce button.button:focus,
+:root .woocommerce input.button:focus {
+	text-decoration: underline;
+}
+
+:root .wp-block-file__button {
+	margin: 0 10px;
+}
+
+/* SELECT2 */
+
+.select2-container--default .select2-selection--single {
+	background: transparent;
+}
+
+.select2-container .select2-selection--single {
+	font-size: 1.6rem;
+	height: 50px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	color: inherit;
+	font-size: 1.6rem;
+	line-height: 50px;
+	padding-left: 18px;
+	padding-right: 40px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 48px;
+	width: 40px;
+}
+
+/* Tables ------------------------------------ */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	margin: 4rem 0;
+	max-width: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+
+th,
+td,
+caption {
+	padding: 0.8rem;
+}
+
+th,
+td {
+	border: 0.1rem solid $text-color;
+	line-height: 1.4;
+	margin: 0;
+	overflow: visible;
+}
+
+caption {
+	background-color: $text-color;
+	font-weight: 700;
+	text-align: center;
+}
+
+thead {
+	white-space: nowrap;
+}
+
+th {
+	font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/*	3. Helper Classes
+/* --------------------------------------------------------------------------------------------- */
+
+/* Layout ------------------------------------ */
+
+.no-margin {
+	margin: 0;
+}
+.no-padding {
+	padding: 0;
+}
+
+.screen-height {
+	min-height: 100vh;
+}
+
+.screen-width {
+	position: relative;
+	left: calc(50% - 50vw);
+	width: 100vw;
+}
+
+.center-vertically {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.no-scrollbars {
+	scrollbar-width: none;
+}
+.no-scrollbars::-webkit-scrollbar {
+	display: none;
+}
+
+/* Sections ---------------------------------- */
+
+/* Toggles ----------------------------------- */
+
+.toggle {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	position: relative;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	text-align: inherit;
+	user-select: none;
+}
+
+button.toggle {
+	background: none;
+	border-radius: 0;
+	padding: 0;
+}
+
+/* Grid Structure ---------------------------- */
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.grid .grid {
+	margin-left: 0;
+	width: 100%;
+}
+
+.grid .grid:last-child {
+	margin-bottom: 0;
+}
+
+.grid {
+	margin: 0 0 -4rem -1rem;
+}
+
+.grid + .grid {
+	margin-top: 4rem;
+}
+
+.grid-align-baseline {
+	align-items: baseline;
+}
+.grid-align-bottom {
+	align-items: flex-end;
+}
+.grid-align-top {
+	align-items: flex-start;
+}
+
+.grid-justify-start {
+	justify-content: start;
+}
+.grid-justify-center {
+	justify-content: center;
+}
+.grid-justify-end {
+	justify-content: flex-end;
+}
+
+.grid .grid-item {
+	margin: 0 0 4rem 1rem;
+	width: calc(100% - 1rem);
+}
+
+.grid.mcols-1 > .grid-item {
+	width: calc(100% - 1rem);
+}
+.grid.mcols-2 > .grid-item {
+	width: calc(50% - 1rem);
+}
+
+.grid-item.col-1 {
+	width: calc(100% - 1rem) !important;
+}
+.grid-item.col-2 {
+	width: calc(50% - 1rem) !important;
+}
+.grid-item.col-3 {
+	width: calc(33.33% - 1rem) !important;
+}
+.grid-item.col-4 {
+	width: calc(25% - 1rem) !important;
+}
+
+.grid.no-hgutter > .grid-item,
+.grid.mcols-1.no-hgutter > .grid-item {
+	width: 100%;
+}
+.grid.mcols-2.no-hgutter > .grid-item {
+	width: 50%;
+}
+
+.grid.no-vgutter,
+.grid.no-vgutter .grid-item {
+	margin-bottom: 0;
+}
+
+.grid.no-hgutter,
+.grid.no-hgutter .grid-item {
+	margin-left: 0;
+}
+
+.grid.match-gutter {
+	margin-bottom: -1rem;
+}
+.grid.match-gutter + .grid.match-gutter {
+	margin-top: 1rem;
+}
+.grid.match-gutter .grid-item {
+	margin-bottom: 1rem;
+}

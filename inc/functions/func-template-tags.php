@@ -30,6 +30,38 @@ function orissa_posted_on_and_author() {
 }
 
 /**
+ * Prints HTML with meta information for the current post-date/time and author for single.
+ */
+function orissa_posted_on_and_author_for_single() {
+    $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+    if (get_the_time('U') !== get_the_modified_time('U')) {
+        $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+    }
+
+    $time_string = sprintf($time_string,
+        esc_attr(get_the_date('c')),
+        esc_html(get_the_date()),
+        esc_attr(get_the_modified_date('c')),
+        esc_html(get_the_modified_date())
+    );
+
+    $author_id = get_the_author_meta('ID');
+    $author_gravatar_url = get_avatar_url($author_id, array('size' => 60));
+    $author_name = get_the_author_meta('display_name', $author_id);
+
+    if ($author_gravatar_url) {
+        $author_avatar = '<img class="post-author-avatar" src="' . $author_gravatar_url . ' " alt=' . $author_name . '>';
+    }
+
+    $posted_on = '<div class="post-posted-on">' . $time_string . '</div>';
+
+    $author = '<div class="author"> By <a href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' .
+    esc_html(get_the_author()) . '</a> - </div>';
+
+    echo '<div class="post-meta-info"> '. $author .$posted_on . '</div>';
+}
+
+/**
  * Excerpt Filters
  */
 
@@ -85,10 +117,10 @@ function orissa_prev_next_pagination() {?>
 
 <div class="pagination-container">
     <div class="prev-link">
-        <?php previous_post_link();?>
+        <?php previous_post_link("Prev : %link");?>
     </div>
     <div class="next-link">
-        <?php next_post_link();?>
+        <?php next_post_link("Next : %link");?>
     </div>
 </div>
 
@@ -114,7 +146,17 @@ function orissa_numbered_pagination() {
     $args = [
         "before_page_number" => '<span class="orissa-page-number">',
         "after_page_number" => '</span>',
+        "prev_text" => "Prev",
+        "next_text" => "Next"
     ];
 
-    printf("<nav class='orissa-pagination'>%s</nav>", wp_kses(paginate_links($args), $allowed_tags));
+    printf("<div class='orissa-pagination-wrapper'><nav class='orissa-pagination'>%s</nav></div>", wp_kses(paginate_links($args), $allowed_tags));
+}
+
+/**
+*  Load More Button
+*/
+
+function orissa_load_more_pagination(){
+    printf("<div class='orissa-pagination-wrapper'><button type='button' id='load-more-btn'>Load More</button></div>");
 }

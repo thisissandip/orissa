@@ -6,7 +6,8 @@
  * @package orissa
  */
 
-function orissa_theme_support() {
+function orissa_theme_support()
+{
 
     /**
      * Add support for core custom logo
@@ -84,5 +85,3 @@ function orissa_theme_support() {
 }
 
 add_action("after_setup_theme", "orissa_theme_support");
-
-?>

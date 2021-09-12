@@ -42,7 +42,16 @@ elseif (is_category() && !is_front_page()): ?>
     get_template_part("template-parts/content/content-none");
 endif;?>
 
-    <?php orissa_numbered_pagination();?>
+
+    <?php 
+
+    // load more pagination
+    orissa_load_more_pagination();
+    
+    // numbered pagination
+    // orissa_numbered_pagination();
+    
+    ?>
 
 </main>
 <!-- #site-content -->

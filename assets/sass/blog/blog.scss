@@ -1,36 +1,34 @@
 /** === Blog Page and Blog (Posts/Pages) Preview Card Styles === */
 
 #site-content {
+	margin: 0 auto;
+	overflow: hidden;
+	font-family: $font__primary;
 	/** === Blog Page Title === */
 	.page-title {
-		width: 100%;
-		height: 200px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		width: $content__width;
+		margin: 0 auto;
 		color: #000;
-		font-size: 80px;
-		.author-title,
-		.category-title {
-			font-size: 30px;
-		}
+		font-size: 5rem;
+		font-weight: $font__weight-heading;
+		line-height: 1.7em;
+		letter-spacing: $heading-letter-spacing;
 	}
 	/** === Blog Page Container === */
 	.posts-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background-color: cadetblue;
+		//background-color: cadetblue;
 		/** === Blog (Posts/Page) Preview Card === */
 		.post-preview-card {
 			margin: 0 auto;
 			opacity: 0;
-			transform: translateY(-8%);
+			transform: translateY(-4%);
 			width: $content__width;
-			margin: 30px 5px;
+			margin: 15px 0;
 
-			.entry-header {
+			.post-card__header {
 				position: relative;
 				cursor: pointer;
 				img {
@@ -40,24 +38,28 @@
 					transition: 0.3s transform ease;
 				}
 
-				&:hover + .entry-card-info {
+				&:hover + .post-card__info {
 					a {
-						.post-card-title {
+						.post-card__title {
 							color: red;
 						}
 					}
 				}
 			}
 
-			.entry-card-info {
+			.post-card__info {
 				width: 100%;
-				.post-card-title {
+				.post-card__title {
 					width: 100%;
-					font-size: 30px;
-					padding: 10px 0;
+					font-size: 2rem;
+					padding: 15px 0;
 					transition: 0.13s all ease;
 					overflow: hidden;
 					text-overflow: ellipsis;
+					font-family: $font__heading;
+					font-weight: $font__weight-heading;
+					font-size: $font__size--lg;
+					letter-spacing: $heading-letter-spacing;
 					a {
 						width: 100%;
 						color: black;
@@ -66,13 +68,19 @@
 						text-decoration: none;
 
 						&:hover {
-							color: red;
+							text-decoration: underline;
 						}
 					}
 				}
 
-				.post-card-description {
-					padding-bottom: 5px;
+				.post-card__description {
+					font-family: $font__content;
+					font-weight: $font__weight-body;
+					font-size: $font__size--xsm;
+					padding-bottom: 15px;
+					p {
+						margin-bottom: 2px;
+					}
 				}
 				.posted-on {
 					padding-bottom: 5px;
@@ -85,6 +93,29 @@
 						color: navy;
 					}
 				}
+			}
+		}
+	}
+
+	.orissa-pagination-wrapper {
+		display: flex;
+		margin: 0 auto;
+		max-width: $content__width;
+		padding: 4em 0 6em 0;
+		.orissa-pagination {
+			margin: 0 auto;
+			.page-numbers {
+				margin-right: 5px;
+				padding: 5px 9px;
+				color: #000;
+				background-color: $white;
+				border-color: $gray;
+				border: 1px solid $gray;
+				border-radius: 3px;
+			}
+			.current {
+				color: #fff;
+				background-color: $gray;
 			}
 		}
 	}
@@ -118,10 +149,10 @@
 				display: inline-block;
 				margin: 20px 0px;
 
-				.entry-card-info {
+				.post-card__info {
 					margin: 5px 0;
 
-					.post-card-title {
+					.post-card__title {
 						font-size: 23px;
 						padding: 5px 0;
 						a {
