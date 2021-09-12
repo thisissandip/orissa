@@ -60,7 +60,7 @@ $tag_lists = wp_get_post_terms(get_the_ID(), 'tag', array('fields' => 'all'));
 
         <?php
         // post-tags
-        if (!empty($tag_lists) || is_array($tag_lists)): ?>
+        if (!empty($tag_lists) && is_array($tag_lists)): ?>
 
         <div class="tag-container">
             <?php foreach ($tag_lists as $key => $term) {

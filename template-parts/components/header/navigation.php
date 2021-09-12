@@ -15,6 +15,7 @@ $site_description = get_bloginfo('description');
         <div class="site-logo">
             <?php the_custom_logo();?>
         </div>
+
         <?php else: ?>
         <div class="site-info">
             <?php if ($site_title): ?>
@@ -26,6 +27,7 @@ echo $home_link_contents;
             </div>
             <?php endif;?>
         </div>
+
         <?php endif;?>
 
     </div>
@@ -33,8 +35,6 @@ echo $home_link_contents;
     <div class="orissa-search-icon">
         <i class="fas fa-search"></i>
     </div>
-
-
 
     <!-- header-menu end-->
     <div class="header-modal">

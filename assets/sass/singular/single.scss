@@ -5,7 +5,8 @@
 	background-color: #fff;
 	color: #000;
 
-	article {
+	article,
+	div {
 		header.entry-header {
 			padding: 2em 0 0 0;
 			width: 100%;
@@ -65,19 +66,22 @@
 		padding: 1em 0;
 		font-family: $font__secondary;
 		font-size: $font__size--xsm;
+		overflow: hidden;
 
 		& > * {
 			max-width: $content__width;
 			margin-left: auto !important;
 			margin-right: auto !important;
 		}
-		& > .alignfull {
+		& > .alignfull,
+		& > * > .alignfull {
 			width: 100%;
 			max-width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 		}
-		& > .alignwide {
+		& > .alignwide,
+		& > * > .alignwide {
 			width: calc(#{$content__width--wide} + 2 * #{$content__padding});
 			max-width: 100%;
 			height: 100%;
@@ -85,6 +89,7 @@
 			margin-right: auto;
 		}
 		& > .alignleft,
+		& > * > .alignleft,
 		& > [data-align='left'] > .wp-block-cover,
 		[data-align='right'] > .wp-block-cover {
 			float: left;
@@ -92,13 +97,15 @@
 			margin-right: 10px !important;
 			max-width: 420px;
 		}
-		& > .alignright {
+		& > .alignright,
+		& > * > .alignright {
 			float: right;
 			margin-right: calc(50% - #{$content__width} / 2) !important;
 			margin-left: 10px !important;
 			max-width: 420px;
 		}
-		& > .aligncenter {
+		& > .aligncenter,
+		& > * > .aligncenter {
 			margin: 0 auto !important;
 		}
 
@@ -121,7 +128,8 @@
 	}
 
 	.entry-footer {
-		margin: 0 auto;
+		display: block;
+		margin: 0px auto;
 		max-width: $content__width;
 		padding: 4em 0;
 		.pagination-container {

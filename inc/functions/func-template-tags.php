@@ -154,7 +154,7 @@ function orissa_numbered_pagination() {
 }
 
 /**
-*  Load More Button
+*  Load More Button Pagination
 */
 
 function orissa_load_more_pagination(){

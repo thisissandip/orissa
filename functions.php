@@ -40,3 +40,9 @@ require ORISSA_DIR_PATH . "/inc/functions/func-menus.php";
  */
 
 require ORISSA_DIR_PATH . "/inc/functions/func-template-tags.php";
+
+/**
+ *  Ajax
+ */
+
+require ORISSA_DIR_PATH . "/inc/functions/func-ajax.php";

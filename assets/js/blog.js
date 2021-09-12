@@ -9,7 +9,7 @@ function init() {
 			duration: 0.7,
 			scrollTrigger: {
 				trigger: card,
-				start: 'top+=30 bottom-=350',
+				start: 'top+=50 bottom-=250',
 				//markers: true,
 			},
 		});

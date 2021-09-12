@@ -37,7 +37,7 @@ class Orissa_Menu_Walker extends Walker_Nav_Menu {
         $classes[] = 'menu-item-' . $item->ID;
 // if depth is > 0 and the then item has children then (for ul submenu > li )
         if ($depth && $args->walker->has_children) {
-            $classes[] = 'dropdown-submenu';
+                $classes[] = 'dropdown-submenu';
         }
 // join / implode the classes by applying filter nav_menu_css_class
         $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));

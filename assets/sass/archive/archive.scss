@@ -1,0 +1,18 @@
+.archive {
+	#site-content {
+		.page-title {
+			width: $content__width;
+			margin: 0 auto;
+			color: #000;
+			font-size: 60px;
+			font-weight: $font__weight-heading;
+			line-height: 1.6em;
+			letter-spacing: $heading-letter-spacing;
+
+			.author-title,
+			.category-title {
+				font-size: 35px;
+			}
+		}
+	}
+}

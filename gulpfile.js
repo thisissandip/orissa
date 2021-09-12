@@ -47,7 +47,7 @@ function javascript() {
 function watch() {
 	browserSync.init({
 		open: 'external',
-		proxy: 'http://orissa.test/',
+		proxy: 'http://customthemes.test/',
 	});
 	gulp.watch(styleWatchFiles, css);
 	gulp.watch(styleWatchFiles, editorCSS);

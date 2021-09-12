@@ -9,8 +9,6 @@ if (have_posts()):
 
         the_post();
 
-        print(get_post_type());
-
         get_template_part('template-parts/content/content', "page");
 
         // Display related posts
