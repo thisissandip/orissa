@@ -57,7 +57,7 @@ $orissa_comment_count = get_comments_number();
     <?php
 		the_comments_pagination(
 			array(
-				'before_page_number' => esc_html__( 'Page', 'orissa' ) . ' ',
+				/* 'before_page_number' => esc_html__( 'Page', 'orissa' ) . ' ', */
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(
 					'<span class="nav-prev-text">%s</span>',

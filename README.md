@@ -18,6 +18,7 @@ To do:
 - [x] Comments
 - [x] Comments Form
 - [x] Comments Styling
+- [x] Comments Pagination
 - [ ] Widgets
 - [ ] Footer
 - [ ] Redesign Nav and Search Form
