@@ -1,0 +1,17 @@
+.widget-area {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3rem;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	max-width: calc(100vw - 8rem);
+	margin: 3rem auto;
+}
+
+@media only screen and (max-width: 760px) {
+	.widget-area {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: calc(2 * var(--global--spacing-horizontal));
+	}
+}

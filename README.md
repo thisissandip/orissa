@@ -20,7 +20,11 @@ To do:
 - [x] Comments Styling
 - [x] Comments Pagination
 - [ ] Widgets
+  - [x] register sidebar
+  - [x] display that sidebar using "dynamic_sidebar( 'sidebar-id' );"
+  - [ ] style the sidebar
 - [ ] Footer
+- [ ] Theme Mods
 - [ ] Redesign Nav and Search Form
 - [ ] Check Mobile Edge Cases
 - [ ] Update Project ReadMe
