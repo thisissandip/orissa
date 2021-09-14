@@ -74,7 +74,14 @@ $tag_lists = wp_get_post_terms(get_the_ID(), 'tag', array('fields' => 'all'));
             <?php } ?>
         </div>
 
-        <?php endif; ?>
+        <?php endif; 
+
+            if(comments_open()):
+                comments_template();
+            endif;
+        
+        ?>
+
     </div><!-- .entry-content -->
 
     <footer class="entry-footer default-max-width">

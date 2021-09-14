@@ -1,4 +1,6 @@
-<?php get_header();?>
+<?php get_header();
+global $wp_query; 
+?>
 
 
 <main id="site-content">
@@ -29,21 +31,22 @@ elseif (is_category() && !is_front_page()): ?>
 
     <?php endif;?>
 
-    <div class="posts-container">
+    <div class="posts-container" data-page="<?php echo get_query_var( "paged" ) ? get_query_var( "paged" ) : 1 ?>"
+        data-maxpage="<?php echo $wp_query->max_num_pages  ?>">
         <?php while (have_posts()) {
     the_post();
     // display blog cards
     get_template_part("template-parts/components/blog/blog-card");
-}
-
+} ?>
+    </div>
+    <?php
     // load more pagination
-    //orissa_load_more_pagination();
-
+    orissa_load_more_pagination();
+    
     // numbered pagination
-    orissa_numbered_pagination();
+    //orissa_numbered_pagination();
 ?>
 
-    </div>
     <?php else:
     // If no content, include the "No posts found" template.
     get_template_part("template-parts/content/content-none");

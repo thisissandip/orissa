@@ -46,3 +46,9 @@ require ORISSA_DIR_PATH . "/inc/functions/func-template-tags.php";
  */
 
 require ORISSA_DIR_PATH . "/inc/functions/func-ajax.php";
+
+/**
+ *  Custom Comments
+ */
+
+require ORISSA_DIR_PATH . "/inc/functions/func-comments.php";

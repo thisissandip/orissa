@@ -27,6 +27,10 @@
     <div class="entry-content">
         <?php
             the_content();
+
+            if(comments_open()):
+                comments_template();
+            endif;
         ?>
     </div><!-- .entry-content -->
 

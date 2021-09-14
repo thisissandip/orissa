@@ -23,8 +23,10 @@
 		/** === Blog (Posts/Page) Preview Card === */
 		.post-preview-card {
 			margin: 0 auto;
+
+			/* for gsap
 			opacity: 0;
-			transform: translateY(-4%);
+			transform: translateY(-4%); */
 			width: $content__width;
 			margin: 15px 0;
 

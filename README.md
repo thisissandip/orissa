@@ -14,10 +14,12 @@ To do:
 - [x] Gutenberg Styles
 - [x] Handle Gutenberg Styles Edge Cases
 - [x] Pagination - Numbered
-- [ ] Pagination - Load More Ajax
-- [ ] Comments
+- [x] Pagination - Load More Ajax
+- [x] Comments
+- [x] Comments Form
+- [x] Comments Styling
 - [ ] Widgets
 - [ ] Footer
-- [ ] Redesign Nav
+- [ ] Redesign Nav and Search Form
 - [ ] Check Mobile Edge Cases
 - [ ] Update Project ReadMe

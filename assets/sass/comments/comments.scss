@@ -1,0 +1,56 @@
+#comments {
+	ul.comment-list {
+		margin: 0;
+		li {
+			margin: 0;
+			list-style: none;
+		}
+		li.comment {
+			border-radius: 5px;
+			margin: 1em 0;
+			background-color: rgb(242, 242, 242);
+			padding: 1em;
+
+			.comment-body {
+				.comment-meta {
+					display: flex;
+					align-items: center;
+					.comment-authorimg {
+						img {
+							border-radius: 100%;
+						}
+						margin-right: 10px;
+					}
+					.comment-date-time {
+						margin-top: 3px;
+						font-size: 16px;
+					}
+				}
+
+				.reply {
+					display: inline-block;
+					padding: 5px 15px;
+					border-radius: 5px;
+					background: #cf8eff;
+					a {
+						color: #000;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+#commentform {
+	textarea {
+		height: 6rem;
+		padding: 0.7rem 1rem;
+		font-size: 1.3rem;
+	}
+	.comment-form-cookies-consent {
+		label {
+			font-size: 1.3rem;
+		}
+	}
+}
