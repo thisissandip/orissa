@@ -11,33 +11,32 @@ $site_description = get_bloginfo('description');
 
     <div class="header-title">
 
-        <?php if (has_custom_logo()): ?>
-        <div class="site-logo">
-            <?php the_custom_logo();?>
-        </div>
-
-        <?php else: ?>
         <div class="site-info">
-            <?php if ($site_title): ?>
-            <div class="site-title">
-                <?php
+            <?php if (has_custom_logo()): ?>
+            <div class="site-logo">
+                <?php the_custom_logo();?>
+            </div>
+            <?php endif;?>
+
+            <div class="site-name">
+                <?php if ($site_title && get_theme_mod("display_title") ): ?>
+                <div class="site-title">
+                    <?php
                     $home_link_contents = '<a href="' . esc_url(home_url('/')) . '" rel="home">' . wp_kses_post($site_title) . '</a>';
                     echo $home_link_contents;
                 ?>
-
-                <!-- make site description conditional -->
-
-                <div class="site-description">
-                    <?php
+                </div>
+                <?php endif;?>
+            </div>
+        </div>
+        <!-- make site description conditional -->
+        <?php if ($site_description && get_theme_mod("display_description")): ?>
+        <div class="site-description">
+            <?php
                     $description = wp_kses_post($site_description);
                     echo $description;
                 ?>
-
-                </div>
-            </div>
-            <?php endif;?>
         </div>
-
         <?php endif;?>
 
     </div>

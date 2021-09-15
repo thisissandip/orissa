@@ -39,7 +39,9 @@
             )
         );
 
-        //Color Options
+        /**
+        * Add Color Options to customizer
+        */
 
         // header
         $wp_customize->add_setting( 'header_textcolor' , array(
@@ -74,6 +76,46 @@
             'label'        => __( 'Button Color', 'orissa' ),
             'section'    => 'colors',
         ) ) );
+
+        // Add "display_title" setting for displaying the site-title & tagline.
+			$wp_customize->add_setting(
+				'display_title',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => 'sanitize_checkbox',
+				)
+			);
+
+        // Add control for the "display_title" setting.
+			$wp_customize->add_control(
+				'display_title',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'title_tagline',
+					'label'   => esc_html__( 'Display Site Title', 'orissa' ),
+				)
+			);
+
+        // Add "display_description" setting for displaying the site-title & tagline.
+			$wp_customize->add_setting(
+				'display_description',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => 'sanitize_checkbox',
+				)
+			);
+
+        // Add control for the "display_description" setting.
+			$wp_customize->add_control(
+				'display_description',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'title_tagline',
+					'label'   => esc_html__( 'Display Site Tagline', 'orissa' ),
+				)
+			);
  }
 
 add_action( 'customize_register', 'register_orissa_customizer_sections' );
@@ -116,3 +158,7 @@ input[type='submit'],
 <?php
 }
 add_action( 'wp_head', 'mytheme_customize_css');
+
+function sanitize_checkbox( $checked = null ) {
+    return (bool) isset( $checked ) && true === $checked;
+}

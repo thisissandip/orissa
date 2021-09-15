@@ -15,6 +15,10 @@ header {
 		}
 
 		.header-title {
+			.site-info {
+				display: flex;
+				align-items: center;
+			}
 			.site-logo {
 				margin-right: 10px;
 				a {
@@ -24,7 +28,7 @@ header {
 					}
 				}
 			}
-			.site-info {
+			.site-name {
 				.site-title {
 					text-align: center;
 					letter-spacing: $heading-letter-spacing;
@@ -35,13 +39,13 @@ header {
 					font-size: 40px;
 					font-weight: 600;
 				}
-				.site-description {
-					text-align: center;
-					margin-left: 7px;
-					margin-bottom: 7px;
-					font-weight: 300;
-					font-size: 18px;
-				}
+			}
+			.site-description {
+				text-align: center;
+				margin-left: 7px;
+				margin-bottom: 7px;
+				font-weight: 400;
+				font-size: 16px;
 			}
 		}
 

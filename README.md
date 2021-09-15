@@ -26,7 +26,7 @@ To do:
 - [x] Footer
 - [ ] Theme Mods
   - [x] Theme colors
-  - [ ] Site Info option
+  - [x] Site Title and Description option
   - [x] Excerpt & Continue Reading
   - [ ] Social Icons on Nav
 - [ ] Redesign Nav and Search Form
