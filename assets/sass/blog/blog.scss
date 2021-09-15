@@ -6,12 +6,14 @@
 	font-family: $font__primary;
 	/** === Blog Page Title === */
 	.page-title {
-		width: $content__width;
-		margin: 30px auto;
-		font-size: 5rem;
-		font-weight: $font__weight-heading;
-		line-height: 1.7em;
-		letter-spacing: $heading-letter-spacing;
+		h1 {
+			width: $content__width;
+			margin: 30px auto;
+			font-weight: $font__weight-heading;
+			line-height: 1.7em;
+			letter-spacing: $heading-letter-spacing;
+			font-size: 60px;
+		}
 	}
 	/** === Blog Page Container === */
 	.posts-container {
