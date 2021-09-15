@@ -25,7 +25,15 @@ $has_post_thumbnail = get_the_post_thumbnail(get_the_ID());
                 <?php the_title()?>
             </a>
         </div>
-        <div class="post-card__description"><?php the_excerpt()?></div>
+        <div class="post-card__description">
+            <?php 
+            if(get_theme_mod( "orissa_display_excerpt_or_full_post" ) === "excerpt" )
+            {
+                the_excerpt();
+            } else if(get_theme_mod( "orissa_display_excerpt_or_full_post" ) === "full")  {
+                the_content();
+            }
+            ?></div>
         <?php orissa_posted_on_and_author()?>
 
     </div><!-- .entry-card-info -->

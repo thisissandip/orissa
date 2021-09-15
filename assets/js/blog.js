@@ -29,8 +29,8 @@ function init() {
  */
 
 let post_container = document.querySelector('.posts-container');
-let currentpage = post_container?.dataset.page;
-let maxPages = post_container?.dataset.maxpage;
+let currentpage = parseInt(post_container?.dataset.page);
+let maxPages = parseInt(post_container?.dataset.maxpage);
 
 const loadmorebtn = document.querySelector('#load-more-post-btn');
 

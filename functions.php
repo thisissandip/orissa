@@ -42,6 +42,12 @@ require ORISSA_DIR_PATH . "/inc/functions/func-menus.php";
 require ORISSA_DIR_PATH . "/inc/functions/func-sidebars.php";
 
 /**
+ *  Customizer.
+ */
+
+require ORISSA_DIR_PATH . "/inc/functions/func-customizer.php";
+
+/**
  *  Filters and Template Tags.
  */
 

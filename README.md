@@ -25,6 +25,10 @@ To do:
   - [x] style the sidebar
 - [x] Footer
 - [ ] Theme Mods
+  - [ ] Theme colors
+  - [ ] Site Info option
+  - [x] Excerpt & Continue Reading
+  - [ ] Social Icons on Nav
 - [ ] Redesign Nav and Search Form
 - [ ] Check Mobile Edge Cases
 - [ ] Update Project ReadMe

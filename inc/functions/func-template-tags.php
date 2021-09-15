@@ -66,12 +66,12 @@ function orissa_posted_on_and_author_for_single() {
  */
 
 function orissa_theme_custom_excerpt_length($length) {
-    return 25;
+    return 30;
 }
 add_filter('excerpt_length', 'orissa_theme_custom_excerpt_length', 999);
 
 function orissa_theme_custom_excerpt_more($more) {
-    return '';
+    return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '"> Read More </a>';
 }
 add_filter('excerpt_more', 'orissa_theme_custom_excerpt_more');
 

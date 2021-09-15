@@ -21,9 +21,19 @@ $site_description = get_bloginfo('description');
             <?php if ($site_title): ?>
             <div class="site-title">
                 <?php
-$home_link_contents = '<a href="' . esc_url(home_url('/')) . '" rel="home">' . wp_kses_post($site_title) . '</a>';
-echo $home_link_contents;
-?>
+                    $home_link_contents = '<a href="' . esc_url(home_url('/')) . '" rel="home">' . wp_kses_post($site_title) . '</a>';
+                    echo $home_link_contents;
+                ?>
+
+                <!-- make site description conditional -->
+
+                <div class="site-description">
+                    <?php
+                    $description = wp_kses_post($site_description);
+                    echo $description;
+                ?>
+
+                </div>
             </div>
             <?php endif;?>
         </div>
