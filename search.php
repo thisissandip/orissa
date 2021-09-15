@@ -19,19 +19,24 @@ global $wp_query;
 
     <?php if (have_posts()): ?>
 
-    <div class="posts-container">
+    <div class="posts-container" data-page="<?php echo get_query_var( "paged" ) ? get_query_var( "paged" ) : 1 ?>"
+        data-maxpage="<?php echo $wp_query->max_num_pages  ?>">
         <?php while (have_posts()) {
     the_post();
     // display blog cards
-    get_template_part("template-parts/components/blog/blog-card");
+    get_template_part("template-parts/components/blog-card/blog-card");
 }
-    // load more pagination
-    //orissa_load_more_pagination();
-
-    // numbered pagination
-    orissa_numbered_pagination();
     ?>
     </div>
+    <?php
+    if(get_theme_mod("orissa_pagination_type") === "numbered_pagination"){
+        // numbered pagination
+        orissa_numbered_pagination();
+    }else if(get_theme_mod("orissa_pagination_type") === "load_more_pagination"){
+        // load more pagination
+        orissa_load_more_archive_pagination();
+    }
+    ?>
     <?php endif;?>
 
 </main>

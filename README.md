@@ -33,6 +33,7 @@ To do:
   - [x] Nav and Search bg color
 - [x] Redesign Navigation
 - [x] Fix Blog Card
+- [ ] 404 page
 - [ ] Styling (Prettify) the theme
 - [ ] Check Mobile Edge Cases
 - [ ] Update Project ReadMe
