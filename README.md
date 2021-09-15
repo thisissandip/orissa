@@ -29,6 +29,9 @@ To do:
   - [x] Site Title and Description option
   - [x] Excerpt & Continue Reading
   - [ ] Social Icons on Nav
-- [ ] Redesign Nav and Search Form
+- [ ] Redesign
+  - [ ] Nav
+  - [ ] Search Form
+- [ ] Fix Blog Card
 - [ ] Check Mobile Edge Cases
 - [ ] Update Project ReadMe

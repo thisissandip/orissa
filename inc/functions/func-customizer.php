@@ -67,15 +67,29 @@
 
         // buttons
 
-        $wp_customize->add_setting( 'button_bgcolor' , array(
+        $wp_customize->add_setting( 'button_color' , array(
             'default'     => "#cf8eff",
             'transport'   => 'refresh',
         ) );
 
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'button_bgcolor', array(
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'button_color', array(
             'label'        => __( 'Button Color', 'orissa' ),
             'section'    => 'colors',
         ) ) );
+
+               // Content text color
+
+            $wp_customize->add_setting( 'content_text_color' , array(
+                'default'     => "#000",
+                'transport'   => 'refresh',
+            ) );
+    
+            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'content_text_color', array(
+                'label'        => __( 'Content Text Color', 'orissa' ),
+                'section'    => 'colors',
+            ) ) );
+
+        
 
         // Add "display_title" setting for displaying the site-title & tagline.
 			$wp_customize->add_setting(
@@ -139,6 +153,11 @@ a {
     ?>;
 }
 
+main {
+    color: <?php echo get_theme_mod('content_text_color', "#000000");
+    ?>;
+}
+
 button,
 .button,
 .faux-button,
@@ -150,9 +169,10 @@ input[type='submit'],
 :root .woocommerce #respond input#submit,
 :root .woocommerce a.button,
 :root .woocommerce button.button,
-:root .woocommerce input.button {
-    background: <?php echo get_theme_mod('button_bgcolor', "#000000");
-    ?> !important;
+:root .woocommerce input.button,
+.wp-block-search .wp-block-search__button {
+    background: <?php echo get_theme_mod('button_color', "#000000");
+    ?>;
 }
 </style>
 <?php
