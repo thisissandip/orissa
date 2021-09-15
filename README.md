@@ -23,7 +23,7 @@ To do:
   - [x] register sidebar
   - [x] display that sidebar using "dynamic_sidebar( 'sidebar-id' );"
   - [x] style the sidebar
-- [ ] Footer
+- [x] Footer
 - [ ] Theme Mods
 - [ ] Redesign Nav and Search Form
 - [ ] Check Mobile Edge Cases
