@@ -67,6 +67,11 @@ header {
 			transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 			.header-modal-content {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 20vh;
+
 				.header-modal-title {
 					position: relative;
 					top: 30px;
@@ -101,14 +106,19 @@ header {
 
 				nav.header__main-nav {
 					position: relative;
-					margin-top: 60px;
-					padding-bottom: 40px;
+					padding-bottom: 5rem;
+
 					ul.main-menu {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
 						margin: 0;
 						li.menu-item {
-							font-size: $font__size--xlg;
+							font-size: $font__size--md;
+							text-align: center;
 							list-style: none;
-							margin: 0px 5px;
+							margin: 8px 0;
 							overflow: hidden;
 							line-height: 1.3em;
 
@@ -122,7 +132,7 @@ header {
 							}
 							span {
 								i {
-									font-size: $font__size--md;
+									font-size: $font__size--sm;
 									cursor: pointer;
 									margin-left: 10px;
 									transition: 0.25s all ease;
@@ -136,7 +146,7 @@ header {
 								}
 							}
 							ul.dropdown-menu {
-								margin-bottom: 0 !important;
+								margin: 0;
 							}
 						}
 					}
@@ -178,7 +188,6 @@ header {
 			z-index: 2;
 			width: 100%;
 			height: 135px;
-			background-color: #000;
 			overflow: scroll;
 			transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
 			overflow: hidden;
@@ -197,7 +206,7 @@ header {
 					outline: none;
 					font-size: $font__size--lg;
 					padding: 10px 0px;
-					background-color: #000;
+					background-color: transparent;
 					color: #fff;
 					border-color: #fff;
 					border-top: 0;

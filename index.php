@@ -36,15 +36,18 @@ elseif (is_category() && !is_front_page()): ?>
         <?php while (have_posts()) {
     the_post();
     // display blog cards
-    get_template_part("template-parts/components/blog/blog-card");
+    get_template_part("template-parts/components/blog-card/blog-card");
 } ?>
     </div>
     <?php
-    // load more pagination
-    orissa_load_more_pagination();
-    
-    // numbered pagination
-    //orissa_numbered_pagination();
+    if(get_theme_mod("orissa_pagination_type") === "numbered_pagination"){
+        // numbered pagination
+        orissa_numbered_pagination();
+    }else if(get_theme_mod("orissa_pagination_type") === "load_more_pagination"){
+        // load more pagination
+        orissa_load_more_pagination();
+    }
+
 ?>
 
     <?php else:

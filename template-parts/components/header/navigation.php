@@ -50,31 +50,17 @@ $site_description = get_bloginfo('description');
 
         <div class="header-modal-content">
             <div class="orissa-theme-menu-close"><i class="fas fa-times"></i></div>
-            <div class="header-modal-title">
-                <div class="site-info">
-                    <?php if ($site_title): ?>
-                    <div class="modal-site-title">
-                        <?php
-$home_link_contents = '<a href="' . esc_url(home_url('/')) . '" rel="home">' . wp_kses_post($site_title) . '</a>';
-echo $home_link_contents;
-?>
-                        <?php endif;?>
-
-                    </div>
-                </div>
-            </div>
-            <!-- menu -->
             <?php
-if (has_nav_menu('orissa-theme-header-menu')) {
-    wp_nav_menu(array(
-        'theme_location' => 'orissa-theme-header-menu',
-        'menu_class' => 'main-menu',
-        'container' => 'nav',
-        'container_class' => 'header__main-nav',
-        'walker' => new Orissa_Menu_Walker(),
-    ));
-}
-?>
+                if (has_nav_menu('orissa-theme-header-menu')) {
+                    wp_nav_menu(array(
+                        'theme_location' => 'orissa-theme-header-menu',
+                        'menu_class' => 'main-menu',
+                        'container' => 'nav',
+                        'container_class' => 'header__main-nav',
+                        'walker' => new Orissa_Menu_Walker(),
+                    ));
+                }
+            ?>
             <!-- menu end -->
         </div>
     </div>
@@ -86,7 +72,6 @@ if (has_nav_menu('orissa-theme-header-menu')) {
     </div>
 
     <div class="search-modal-overlay"></div>
-
 
     <!-- search-modal end-->
 

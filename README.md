@@ -29,9 +29,10 @@ To do:
   - [x] Site Title and Description option
   - [x] Excerpt & Continue Reading
   - [ ] Social Icons on Nav
-- [ ] Redesign
-  - [ ] Nav
-  - [ ] Search Form
-- [ ] Fix Blog Card
+  - [x] Load More and Numbered
+  - [x] Nav and Search bg color
+- [x] Redesign Navigation
+- [x] Fix Blog Card
+- [ ] Styling (Prettify) the theme
 - [ ] Check Mobile Edge Cases
 - [ ] Update Project ReadMe

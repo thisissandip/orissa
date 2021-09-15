@@ -89,7 +89,20 @@
                 'section'    => 'colors',
             ) ) );
 
-        
+        // Nav and Search Bg color
+        $wp_customize->add_setting( 'nav_search_bg_color' , array(
+            'default'     => "#000",
+            'transport'   => 'refresh',
+        ) );
+
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nav_search_bg_color', array(
+            'label'        => __( 'Navigation and Search Backgrounf Color', 'orissa' ),
+            'section'    => 'colors',
+        ) ) );
+
+        /**
+        * Option to hide Site Title and Tagline 
+        */
 
         // Add "display_title" setting for displaying the site-title & tagline.
 			$wp_customize->add_setting(
@@ -130,6 +143,40 @@
 					'label'   => esc_html__( 'Display Site Tagline', 'orissa' ),
 				)
 			);
+        
+       /**
+        * Options for Pagination
+        */
+
+        $wp_customize->add_section('orissa-theme-pagination-settings', 
+        array(
+            'title'    => esc_html__( 'Pagination Settings', 'orissa' ),
+            'priority' => 120,
+        ));
+
+        $wp_customize->add_setting(
+            'orissa_pagination_type',
+            array(
+                'capability'        => 'edit_theme_options',
+                'default'           => 'load_more_pagination',
+                'sanitize_callback' => function( $value ) {
+                    return 'numbered_pagination' === $value || 'load_more_pagination' === $value ? $value : 'load_more_pagination';
+                },
+            )
+        );
+
+        $wp_customize->add_control(
+            'orissa_pagination_type',
+            array(
+                'type'    => 'radio',
+                'section' => 'orissa-theme-pagination-settings',
+                'label'   => esc_html__( 'On Archive Pages, posts show:', 'orissa' ),
+                'choices' => array(
+                    'numbered_pagination' => esc_html__( 'Numbered Pagination', 'orissa' ),
+                    'load_more_pagination'    => esc_html__( 'Dynamic Pagination - Load More button', 'orissa' ),
+                ),
+            )
+        );
  }
 
 add_action( 'customize_register', 'register_orissa_customizer_sections' );
@@ -155,6 +202,12 @@ a {
 
 main {
     color: <?php echo get_theme_mod('content_text_color', "#000000");
+    ?>;
+}
+
+.header-modal,
+.search-modal {
+    background: <?php echo get_theme_mod('nav_search_bg_color', "#000000");
     ?>;
 }
 
