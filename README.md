@@ -25,7 +25,7 @@ To do:
   - [x] style the sidebar
 - [x] Footer
 - [ ] Theme Mods
-  - [ ] Theme colors
+  - [x] Theme colors
   - [ ] Site Info option
   - [x] Excerpt & Continue Reading
   - [ ] Social Icons on Nav
